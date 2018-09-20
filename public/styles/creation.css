@@ -107,3 +107,8 @@
     margin: 0 auto;
     padding: 20px;
 }
+
+.center{
+    text-align: center;
+    margin-top: 10px;
+}
