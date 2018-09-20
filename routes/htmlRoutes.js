@@ -20,6 +20,11 @@ module.exports = function(app) {
     });
   });
 
+  //This will load fight and the fight.css
+  app.get("/fight", function(req, res){
+    res.render("fight", {title: "Ace Squadron", css:['fight.css']});
+  })
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
