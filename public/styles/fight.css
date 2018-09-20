@@ -1,0 +1,98 @@
+body {
+    overflow:hidden;
+}
+
+.title, .titleWording {
+    text-align: center;
+}
+
+.teamStats {
+    color: white;
+    margin-bottom: 72px;
+    /* height: 20px; */
+}
+
+.team1unitName, .team2unitName {
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+/* .team1unitHP0, .team2unitHP0 {
+    margin-bottom: -1px;
+} */
+
+.team1unit, .team2unit {
+    margin-bottom: -58px;
+    text-align: center;
+}
+
+.fightBtn {
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.team1unitHP, .team1unitHP0, .team1unitHP1, .team1unitHP2, .team1unitHP3, .team1unitHP4, .team1unitHP5, .team1unitHP6, .team1unitHP7, .team1unitHP8, .team1unitHP9, .team2unitHP, .team2unitHP0, .team2unitHP1, .team2unitHP2, .team2unitHP3, .team2unitHP4, .team2unitHP5, .team2unitHP6, .team2unitHP7, .team2unitHP8, .team2unitHP9 {
+    text-align: center;
+    background-size: 30px 30px;
+    font-size: 20px;
+    /* background-color: green; */
+    border: 0;   
+    /* transition: all 1s ease-in; */
+    border-radius: 10px;
+    margin-bottom: -1px;
+    color: black; 
+}
+
+.kia {
+    margin-bottom: -3px;
+}
+
+.ts {
+    margin-right: 15px;
+}
+
+.picWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;   
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.unitWrapper {
+    opacity: .80;
+}
+
+.tableHeads {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tableStats {
+    margin-right: 20px;
+}
+
+.tabledata1, .tabledata2 {
+    font-weight: bold;
+}
+
+.img {
+    border-style: solid;
+    border-width: 1px;
+}
+
+table {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+td {
+    padding:0 20px 0 20px;
+}
