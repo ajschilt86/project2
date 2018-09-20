@@ -1,0 +1,109 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.large--spacer{
+    height: 50px;
+}
+
+.general--creation{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    background-color: mediumseagreen;
+}
+
+.general--photo{
+    flex: 1.5;
+}
+
+.general--photo--set{
+    width: 100%;
+    height: 100%;
+}
+
+.general--data{
+    flex:2;
+    background-color: greenyellow;
+    margin-left: 20px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.general--data--wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100%;
+    /* justify-content: center; not working right now*/
+    /* align-items: center; */
+}
+
+.data--entry {
+    max-width: 100%;
+    flex: 1;
+    text-align: center;
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+}
+
+.general--data--collection{
+    clear: both;
+}
+
+.pointAllocator{
+    display: block;
+}
+
+.point--spender{
+    display:block;
+}
+
+.squad--creation{
+    background-color: lightpink;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.squad--photo{
+    max-width: 200px;
+    width: 100%;
+}
+
+.squad--photo--wrapper{
+}
+
+.squad--plane{
+    margin-left: 10px;
+    background-color: #777;
+}
+
+.squad--choice{
+    width: calc(50% - 10px);
+    height: 250px;
+    background-color: cyan;
+    margin-top: 20px;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.squad--choice:nth-child(odd){
+    background-color: lavender;
+    margin-right: 20px;
+}
+
+.squad--choice:nth-child(-n+2){
+    margin-top: 0;
+}
+
+.submit--area{
+    background-color:mediumslateblue;
+}
+
+.submit--container{
+    width: 185px;
+    margin: 0 auto;
+    padding: 20px;
+}
