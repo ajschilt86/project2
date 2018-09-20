@@ -14,6 +14,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 20]
       }
     },
+    HP: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     Attack: {
       type: DataTypes.INTEGER,
       allowNull: false,

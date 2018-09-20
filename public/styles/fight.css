@@ -4,6 +4,7 @@ body {
 
 .title, .titleWording {
     text-align: center;
+    font-weight: bold;
 }
 
 .teamStats {
@@ -29,6 +30,14 @@ body {
 .fightBtn {
     border-radius: 10px;
     margin: 0 auto;
+    width: 300px; 
+    height:50px;
+}
+
+.returnToBase {
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 150px; height:50px;
 }
 
 .team1unitHP, .team1unitHP0, .team1unitHP1, .team1unitHP2, .team1unitHP3, .team1unitHP4, .team1unitHP5, .team1unitHP6, .team1unitHP7, .team1unitHP8, .team1unitHP9, .team2unitHP, .team2unitHP0, .team2unitHP1, .team2unitHP2, .team2unitHP3, .team2unitHP4, .team2unitHP5, .team2unitHP6, .team2unitHP7, .team2unitHP8, .team2unitHP9 {
@@ -96,3 +105,4 @@ table {
 td {
     padding:0 20px 0 20px;
 }
+
