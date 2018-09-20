@@ -1,12 +1,11 @@
-var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("/", {
+    res.render("index", {
       title: "Ace Squadron",
-      css: ["landing-page.min.css"],
-      css: ["_masthead.css"]
+      css: ["landing-page.min.css", "_masthead.css"]
     });
   });
 
