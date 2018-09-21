@@ -13,8 +13,8 @@ module.exports = function(app) {
   });
 
   //Squad creation route
-  app.get("/creation", function(req, res) {
-    res.render("creation", { title: "Ace Squadron", css: ["creation.css"] });
+  app.get("/create", function(req, res) {
+    res.render("create", { title: "Ace Squadron", css: ["creation.css"] });
   });
 
   // Render 404 page for any unmatched routes
