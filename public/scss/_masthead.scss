@@ -1,0 +1,38 @@
+header.masthead {
+  position: relative;
+  // background-color: $gray-800;
+  // @include background-cover;
+  .overlay {
+    position: absolute;
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .video {
+    z-index: 0;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .container {
+    z-index: 1;
+    position: absolute;
+    top: -500px;
+  }
+
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
