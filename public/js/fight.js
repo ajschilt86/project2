@@ -226,8 +226,6 @@ function render() {
                 + team1[i].attack + ")(Block: "
                 + (team1[i].defense * 100).toFixed(0) + "%)(Crit Hit: "
                 + (team1[i].critical * 100).toFixed(0) + "%)</p></div");
-			// $(".team1unit" + i).html(team1[i].name + " | health: " + team1[i].health + " <br>(Attack: " + team1[i].attack + ")(Block: " + (team1[i].defense * 100).toFixed(0) + "%)(Crit Hit: " + (team1[i].critical * 100).toFixed(0) + "%)");
-
 		}		
 		team1Attack = team1Attack + team1[i].attack;
 		team1Crit = team1Crit + team1[i].critical;
@@ -261,7 +259,6 @@ function render() {
                 + team2[i].attack + ")(Block: "
                 + (team2[i].defense * 100).toFixed(0) + "%)(Crit Hit: "
                 + (team2[i].critical * 100).toFixed(0) + "%)</p></div");
-			// $(".team2unit" + i).html(team2[i].name + " | health: " + team2[i].health + " <br>(Attack: " + team2[i].attack + ")(Block: " + (team2[i].defense * 100).toFixed(0) + "%)(Crit Hit: " + (team2[i].critical * 100).toFixed(0) + "%)");
 		}
 		team2Attack = team2Attack + team2[i].attack;
 		team2Crit = team2Crit + team2[i].critical;
@@ -275,8 +272,6 @@ function render() {
 	$(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
 	$(".tTwoTotalDodge").html((team2DodgeAvg * 100).toFixed(0) + "%");
 	$(".tTwoTotalHealth").html(team2Health);
-
-
 }
 
 render();
