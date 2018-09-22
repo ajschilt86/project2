@@ -1,10 +1,31 @@
+/***************
+* Utilities
+*/
+
+body{
+    background-image: url('/img/runway.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .large--spacer{
     height: 50px;
 }
 
-.general--creation{
+.center{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/***************
+* General Creator
+*/
+
+/* .general--creation{
     height: 50vh;
     width: 100%;
     display: flex;
@@ -34,16 +55,12 @@
     flex-direction: column;
     max-width: 100%;
     min-height: 100%;
-    /* justify-content: center; not working right now*/
-    /* align-items: center; */
 }
 
 .data--entry {
     max-width: 100%;
     flex: 1;
     text-align: center;
-    /* padding-top: 20px; */
-    /* padding-bottom: 20px; */
 }
 
 .general--data--collection{
@@ -56,41 +73,70 @@
 
 .point--spender{
     display:block;
-}
+} */
+
+/***************
+* Squad creation
+*/
 
 .squad--creation{
-    background-color: lightpink;
+    background-color: #7f7b82dc;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.squad--info{
+    display:flex;
+    flex-direction: column;
+    background-color: #87bfffdc;
+    border-radius: 10px;
+    text-align: center;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.squad--header--name{
+    margin: 20px;
 }
 
 .squad--photo{
     max-width: 200px;
     width: 100%;
+    border-radius: 20px;
 }
 
 .squad--photo--wrapper{
+    padding: 10px;
 }
 
 .squad--plane{
     margin-left: 10px;
-    background-color: #777;
+    background-color: #08415c;
+    padding: 20px 20px 10px 20px;
+    justify-content: baseline;
+    align-items: baseline;
+    border-radius: 10px;
 }
 
 .squad--choice{
     width: calc(50% - 10px);
     height: 250px;
-    background-color: cyan;
+    background-color: #342e37;
+    border-radius: 10px;
     margin-top: 20px;
     position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
 
 .squad--choice:nth-child(odd){
-    background-color: lavender;
+    background-color: #342e37;
     margin-right: 20px;
 }
 
@@ -98,17 +144,45 @@
     margin-top: 0;
 }
 
+/***************
+* Bottom Buttons
+*/
 .submit--area{
-    background-color:mediumslateblue;
 }
 
 .submit--container{
-    width: 260px;
+    background-color:#87bfffdc;
+    width: 235px;
     margin: 0 auto;
     padding: 20px;
+    border-radius: 10px;
 }
 
-.center{
-    text-align: center;
-    margin-top: 10px;
+@media screen and (max-width: 980px) {
+    .squad--choice {
+    width: 100%;
+    }
+
+    .squad--choice:nth-child(odd){
+        background-color: #342e37;
+        margin-right: 0px;
+    }
+    
+    .squad--choice:nth-child(-n+2){
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .squad--plane {
+        padding: 5px 5px 0 5px;
+    }
+
+    .squad--creation{
+        padding: 10px;
+    }
+
+    .squad--choice{
+        font-size: 14px;
+    }
 }
