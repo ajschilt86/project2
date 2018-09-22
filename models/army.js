@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
 module.exports = function(sequelize, DataTypes) {
-  var Squadron = sequelize.define("Squadron", {
+  var Squadron = sequelize.define("squadron", {
     UID: {
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -15,9 +15,9 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+
+  // Squadron.associate = function(models) {
+  //   Squadron.hasMany(models.Planes);
+  // };
   return Squadron;
 };
-
-Squadron.associate(function(models) {
-  Squadron.hasMany(models.Planes);
-});
