@@ -1,0 +1,60 @@
+/***************
+* Utilities
+*/
+
+.large--spacer{
+    height: 50px;
+}
+
+/***************
+* Header
+*/
+
+.header--title--container{
+    height: 20vh;
+    background-color:#87bfff;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/***************
+* Main
+*/
+
+.main{
+}
+
+.main--container{
+    color: white;
+    padding: 20px;
+    background-color: #08415c;
+    border-radius: 5px;
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.htp--ul{
+    
+}
+
+.htp--li{
+    list-style: disc inside url('li--plane.png');
+}
+
+/***************
+* Button
+*/
+.button--container{
+    background-color:#87bfff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.button--container{
+    width: 180px;
+    margin: 0 auto;
+}
