@@ -1,11 +1,5 @@
-var Sequelize = require("sequelize");
 module.exports = function(sequelize, DataTypes) {
-  var Plane = sequelize.define("Plane", {
-    UID: {
-      type: Sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
+  var Planes = sequelize.define("Plane", {
     Name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -14,31 +8,18 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 20]
       }
     },
-    Health: {
-      type: DataTypes.INTEGER,
+    planeName: {
+      type: DataTypes.STRING,
       allowNull: false
-    },
-    Attack: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isNumeric: true
-      }
-    },
-    Evasion: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isNumeric: true
-      }
-    },
-    Critical: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isNumeric: true
-      }
     }
   });
-  return Plane;
+  return Planes;
 };
+
+Planes.associate(function(models) {
+  Planes.belongsTo(models.Squadron, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+});
