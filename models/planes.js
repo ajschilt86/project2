@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 20]
       }
     },
-    HP: {
+    Health: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
