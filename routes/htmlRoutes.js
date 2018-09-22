@@ -17,6 +17,10 @@ module.exports = function(app) {
     res.render("create", { title: "Ace Squadron", css: ["creation.css"] });
   });
 
+  app.get("/faq", function(req, res) {
+    res.render("faq", { title: "Ace Squadron", css: ["instructions.css"] });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
