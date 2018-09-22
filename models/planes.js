@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Planes = sequelize.define("Plane", {
+  var Planes = sequelize.define("Planes", {
     Name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -13,12 +13,12 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
-  // Planes.associate = function(models) {
-  //   Planes.belongsTo(models.Squadron, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
+  Planes.associate = function(models) {
+    Planes.belongsTo(models.Squadron, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Planes;
 };
