@@ -13,13 +13,12 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  // Planes.associate = function(models) {
+  //   Planes.belongsTo(models.Squadron, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
   return Planes;
 };
-
-Planes.associate(function(models) {
-  Planes.belongsTo(models.Squadron, {
-    foreignKey: {
-      allowNull: false
-    }
-  });
-});
