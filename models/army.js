@@ -11,13 +11,13 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: {
         isAlpha: true,
-        len: [1, 20]
+        len: [1, 50]
       }
-    },
-    Planes: {
-      type: DataTypes.Array,
-      allowNull: false
     }
   });
   return Squadron;
 };
+
+Squadron.associate(function(models) {
+  Squadron.hasMany(models.Planes);
+});
