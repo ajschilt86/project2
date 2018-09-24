@@ -108,9 +108,9 @@ $(document).ready(function() {
         },
         {
             'UID': 12,
-            'name': 'Trump Force One',
-            'img': '/img/DevilGundam_profile.png',
-            'hp' : '450',
+            'name': 'SR-71 Blackbird',
+            'img': '/img/sr71.jpg',
+            'hp' : '200',
             'attack' : '5',
             'evasion' : '90',
             'crit' : '5%'
