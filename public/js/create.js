@@ -304,8 +304,6 @@ $(document).ready(function () {
             }
         }
 
-        
-
         console.log('Planes: ' + planes);
 
         $.ajax({
