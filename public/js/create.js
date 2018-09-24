@@ -146,7 +146,7 @@ $(document).ready(function () {
     });
 
     //For each item in the plane array, make a select option
-    $.each(planeArray, (val,text) =>{
+    $.each(planeArray, (val, text) => {
         var planeNumber = 0;
         $('.plane--selector').append($(`<option class=${planeNumber++}~></option>`).val(val).html(text));
     });
@@ -293,18 +293,58 @@ $(document).ready(function () {
             Name: $('#squad--name').val().trim()
         }
 
-        console.log('Squadron Name: ' + squadron);
-
-        // var planes = {
-        //     Name: $('#squad--name').val().trim(),
-        //     planeName: $(`#plane1 :selected`).text(),
-        //     SquadronUID: 
-        // };
+        var getPID;
 
         for (let i = 1; i < 11; i++) {
+            switch ($(`#plane${[i]} :selected`).text()) {
+                case "Su-35 Flanker-E":
+                    getPID = 1;
+                    break;
+                case "F-117 Nighthawk":
+                    getPID = 2;
+                    break;
+                case "F-15 Eagle":
+                    getPID = 3;
+                    break;
+                case "F-22 Raptor":
+                    getPID = 4;
+                    break;
+                case "Su-57 PAK FA":
+                    getPID = 5;
+                    break;
+                case "Mig-35 Fulcrum":
+                    getPID = 6;
+                    break;
+                case "Su-27 Flanker":
+                    getPID = 7;
+                    break;
+                case "S-400 Triumph":
+                    getPID = 8;
+                    break;
+                case "MIM-104 Patriot":
+                    getPID = 9;
+                    break;
+                case "GF13-017NJII God Gundam":
+                    getPID = 10;
+                    break;
+                case "JDG-00X Devil Gundam":
+                    getPID = 11;
+                    break;
+                case "Trump Force One":
+                    getPID = 12;
+                    break;
+                case "Death Star":
+                    getPID = 13;
+                    break;
+                default:
+                    getPID = 1;
+                    break;
+            }
+
             var postPlanes = {
                 Name: $('#squad--name').val().trim(),
-                planeName: $(`#plane${[i]} :selected`).text()
+                planeName: $(`#plane${[i]} :selected`).text(),
+                pID: getPID
             }
 
             $.ajax({
@@ -313,16 +353,8 @@ $(document).ready(function () {
                 data: postPlanes
             }).then(function () {
                 console.log('Hey');
-            }); 
+            });
         }
-        
-        // $.ajax({
-        //     type: "POST",
-        //     url: "/api/planes",
-        //     data: planes
-        // }).then(function () {
-        //     console.log('Hey');
-        // });
 
         // This is working, commenting it out to try something
         $.ajax({
