@@ -143,6 +143,25 @@ var team2 = [
 		critical: Math.random() * .35
 	}
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function hpBars(i) {
 	if (team1[i].health <= 100 && team1[i].health > 60) {
 		$(".team1unitHP" + i).css("background-color", "green").css("width", "100%");
@@ -209,7 +228,7 @@ function render() {
 		}
 	}
 
-	//display team 1 health
+	//display team 1 health and stats
 	var team1Attack = 0;
 	var team1Crit = 0;
 	var team1CritAvg = 0;
@@ -242,7 +261,7 @@ function render() {
 	$(".tOneTotalDodge").html((team1DodgeAvg * 100).toFixed(0) + "%");
 	$(".tOneTotalHealth").html(team1Health);
 
-	//display team 2 health
+	//display team 2 health and stats
 	var team2Attack = 0;
 	var team2Crit = 0;
 	var team2CritAvg = 0;
