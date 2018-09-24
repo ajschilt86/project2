@@ -1,3 +1,123 @@
+var planes = [
+	{
+		'UID': 1,
+		'name': 'Su-35 Flanker-E',
+		'img': '/img/su-35.jpg',
+		'hp' : '100',
+		'attack' : '10',
+		'evasion' : '35',
+		'crit' : '35%'
+	},
+	{
+		'UID': 2,
+		'name': 'F-117 Nighthawk',
+		'img': '/img/stealth-fighter.jpg',
+		'hp' : '100',
+		'attack' : '5',
+		'evasion' : '80',
+		'crit' : '15%'
+	},
+	{
+		'UID': 3,
+		'name': 'F-15 Eagle',
+		'img': '/img/f-15.jpg',
+		'hp' : '100',
+		'attack' : '12',
+		'evasion' : '30',
+		'crit' : '40%'
+	},
+	{
+		'UID': 4,
+		'name': 'F-22 Raptor',
+		'img': '/img/f-22.jpg',
+		'hp' : '100',
+		'attack' : '15',
+		'evasion' : '90',
+		'crit' : '15%'
+	},
+	{
+		'UID': 5,
+		'name': 'Su-57 PAK FA',
+		'img': '/img/su-57.jpg',
+		'hp' : '100',
+		'attack' : '13',
+		'evasion' : '85',
+		'crit' : '25%'
+	},
+	{
+		'UID': 6,
+		'name': 'Mig-35 Fulcrum',
+		'img': '/img/mig35.jpg',
+		'hp' : '100',
+		'attack' : '10',
+		'evasion' : '35',
+		'crit' : '35%'
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'hp' : '100',
+		'attack' : '8',
+		'evasion' : '30',
+		'crit' : '10%'
+	},
+	{
+		'UID': 8,
+		'name': 'S-400 Triumph',
+		'img': '/img/s400.jpg',
+		'hp' : '30',
+		'attack' : '50',
+		'evasion' : '10',
+		'crit' : '80%'
+	},
+	{
+		'UID': 9,
+		'name': 'MIM-104 Patriot',
+		'img': '/img/Patriot.jpg',
+		'hp' : '35',
+		'attack' : '60',
+		'evasion' : '5',
+		'crit' : '85%'
+	},
+	{
+		'UID': 10,
+		'name': 'GF13-017NJII God Gundam',
+		'img': '/img/godGundum.jpg',
+		'hp' : '500',
+		'attack' : '85',
+		'evasion' : '85',
+		'crit' : '10%'
+	},
+	{
+		'UID': 11,
+		'name': 'JDG-00X Devil Gundam',
+		'img': '/img/DevilGundam_profile.png',
+		'hp' : '666',
+		'attack' : '95',
+		'evasion' : '55',
+		'crit' : '15%'
+	},
+	{
+		'UID': 12,
+		'name': 'SR-71 Blackbird',
+		'img': '/img/sr71.jpg',
+		'hp' : '200',
+		'attack' : '5',
+		'evasion' : '90',
+		'crit' : '5%'
+	},
+	{
+		'UID': 13,
+		'name': 'Death Star',
+		'img': '/img/deathstar.jpg',
+		'hp' : '5000',
+		'attack' : '75',
+		'evasion' : '0',
+		'crit' : '10%'
+	}
+]
+
 var team1 = [
 	{
 		name: "B-1 Lancer (General)",
