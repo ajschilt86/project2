@@ -295,24 +295,34 @@ $(document).ready(function () {
 
         console.log('Squadron Name: ' + squadron);
 
-        var planes;
+        // var planes = {
+        //     Name: $('#squad--name').val().trim(),
+        //     planeName: $(`#plane1 :selected`).text(),
+        //     SquadronUID: 
+        // };
 
         for (let i = 1; i < 11; i++) {
-            planes += {
+            var postPlanes = {
                 Name: $('#squad--name').val().trim(),
                 planeName: $(`#plane${[i]} :selected`).text()
             }
+
+            $.ajax({
+                type: "POST",
+                url: "/api/planes",
+                data: postPlanes
+            }).then(function () {
+                console.log('Hey');
+            }); 
         }
-
-        console.log('Planes: ' + planes);
-
-        $.ajax({
-            type: "POST",
-            url: "/api/planes",
-            data: planes
-        }).then(function () {
-            console.log('Hey');
-        });
+        
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/api/planes",
+        //     data: planes
+        // }).then(function () {
+        //     console.log('Hey');
+        // });
 
         // This is working, commenting it out to try something
         $.ajax({
