@@ -4,12 +4,16 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isAlpha: true,
+        isAlphanumeric: true,
         len: [1, 20]
       }
     },
     planeName: {
       type: DataTypes.STRING,
+      allowNull: false
+    },
+    pID: {
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   });
