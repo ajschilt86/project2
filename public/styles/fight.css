@@ -39,7 +39,7 @@ body {
     height:50px;
 }
 
-.returnToBase {
+.returnToBase, .resetBtn {
     border-radius: 10px;
     margin-top: 20px;
     width: 150px; height:50px;
@@ -65,7 +65,7 @@ body {
     margin-right: 15px;
 }
 
-.picWrapper {
+.t1picWrapper0, .t1picWrapper1, .t1picWrapper2, .t1picWrapper3, .t1picWrapper4, .t1picWrapper5, .t1picWrapper6, .t1picWrapper7, .t1picWrapper8, .t1picWrapper9, .t2picWrapper0, .t2picWrapper1, .t2picWrapper2, .t2picWrapper3, .t2picWrapper4, .t2picWrapper5, .t2picWrapper6, .t2picWrapper7, .t2picWrapper8, .t2picWrapper9 {
     display: flex;
     align-items: center;
     flex-wrap: wrap;   
