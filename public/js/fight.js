@@ -280,8 +280,8 @@ var team1b = [];
 function getPlanes() {
 	fetch("/api/planes")
 		.then(function(data2) {
-			console.log(data2);
-			for (var i = 0; i < data2.length; i++) {
+			console.log(data2.json());
+			for (var i = 0; i < data2.json(); i++) {
 				if (team1Choice === data2[i].Name) {
 					team1b.push(data2[i].pID);W
 				}
