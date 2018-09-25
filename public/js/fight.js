@@ -265,7 +265,36 @@ var team2 = [
 ];
 
 
+// grab data from squadrons table using ajax
+// loop through data and render a list in our html using jQuery
+// grab the selection from the list .val()
+// match plane IDs to IDS in plane array, create new array for fight engine
+// render plane data and image in fight screen
+// fight
+// reset after match is over
 
+$.get("/api/squadron", function(data) {
+	for (let i = 0; i < data.length; i++) {
+		$("#squadronSelector1").append("<option>" + data[i].Name + " </option>")
+		$("#squadronSelector2").append("<option>" + data[i].Name + " </option>")
+	}
+});
+
+$("#squadronSelector1").change(function () {
+	var team1Choice = $("#squadronSelector1").val();
+	console.log("t1: " + team1Choice);
+});
+
+$("#squadronSelector2").change(function () {
+	var team2Choice = $("#squadronSelector2").val();
+	console.log("t2: " + team2Choice);
+});
+
+
+
+
+	
+	
 
 
 
