@@ -330,7 +330,7 @@ $(document).ready(function () {
                 case "JDG-00X Devil Gundam":
                     getPID = 11;
                     break;
-                case "Trump Force One":
+                case "SR-71 Blackbird":
                     getPID = 12;
                     break;
                 case "Death Star":

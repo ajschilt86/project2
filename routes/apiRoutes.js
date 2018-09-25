@@ -31,6 +31,10 @@ module.exports = function(app) {
     });
 
     app.get("/api/planes", function(req, res) {
+        var query = {};
+        if (req.query.squadron_id) {
+            query.SquadronID = req.query.squadron_id;
+        }
         db.Planes.findAll({
             include: [db.Squadron]
         }).then(function(dbPlanes) {
