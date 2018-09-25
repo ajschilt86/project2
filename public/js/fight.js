@@ -3,266 +3,120 @@ var planes = [
 		'UID': 1,
 		'name': 'Su-35 Flanker-E',
 		'img': '/img/su-35.jpg',
-		'health' : '100',
+		'health' : 100,
 		'attack' : Math.ceil(Math.random() * 10),
-		'defense' : Math.random() * 35,
-		'critical' : Math.random() * 35
+		'defense' : Math.random() * .35,
+		'critical' : Math.random() * .35
 	},
 	{
 		'UID': 2,
 		'name': 'F-117 Nighthawk',
 		'img': '/img/stealth-fighter.jpg',
-		'health' : '100',
+		'health' : 100,
 		'attack' : Math.ceil(Math.random() * 5),
-		'defense' : Math.random() * 80,
-		'critical' : Math.random() * 15
+		'defense' : Math.random() * .80,
+		'critical' : Math.random() * .15
 	},
 	{
 		'UID': 3,
 		'name': 'F-15 Eagle',
 		'img': '/img/f-15.jpg',
-		'health' : '100',
+		'health' : 100,
 		'attack' : Math.ceil(Math.random() * 12),
-		'defense' : Math.random() * 30,
-		'critical' : Math.random() * 40
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .40
 	},
 	{
 		'UID': 4,
 		'name': 'F-22 Raptor',
 		'img': '/img/f-22.jpg',
-		'health' : '100',
+		'health' : 100,
 		'attack' : Math.ceil(Math.random() * 15),
-		'defense' : Math.random() * 90,
-		'critical' : Math.random() * 15
+		'defense' : Math.random() * .90,
+		'critical' : Math.random() * .15
 	},
 	{
 		'UID': 5,
 		'name': 'Su-57 PAK FA',
 		'img': '/img/su-57.jpg',
-		'health' : '100',
+		'health' : 100,
 		'attack' : Math.ceil(Math.random() * 13),
-		'defense' : Math.random() * 85,
-		'critical' : Math.random() * 25
+		'defense' : Math.random() * .85,
+		'critical' : Math.random() * .25
 	},
 	{
 		'UID': 6,
 		'name': 'Mig-35 Fulcrum',
 		'img': '/img/mig35.jpg',
-		'health' : '100',
+		'health' : 100,
 		'attack' : Math.ceil(Math.random() * 10),
-		'defense' : Math.random() * 35,
-		'critical' : Math.random() * 35
+		'defense' : Math.random() * .35,
+		'critical' : Math.random() * .35
 	},
 	{
 		'UID': 7,
 		'name': 'Su-27 Flanker',
 		'img': '/img/su27.jpg',
-		'health' : '100',
+		'health' : 100,
 		'attack' : Math.ceil(Math.random() * 8),
-		'defense' : Math.random() * 30,
-		'critical' : Math.random() * 10
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
 	},
 	{
 		'UID': 8,
 		'name': 'S-400 Triumph',
 		'img': '/img/s400.jpg',
-		'health' : '30',
+		'health' : 30,
 		'attack' : Math.ceil(Math.random() * 50),
-		'defense' : Math.random() * 10,
-		'critical' : Math.random() * 80
+		'defense' : Math.random() * .10,
+		'critical' : Math.random() * .80
 	},
 	{
 		'UID': 9,
 		'name': 'MIM-104 Patriot',
 		'img': '/img/Patriot.jpg',
-		'health' : '35',
+		'health' : 35,
 		'attack' : Math.ceil(Math.random() * 60),
-		'defense' : Math.random() * 5,
-		'critical' : Math.random() * 85
+		'defense' : Math.random() * .5,
+		'critical' : Math.random() * .85
 	},
 	{
 		'UID': 10,
 		'name': 'GF13-017NJII God Gundam',
 		'img': '/img/godGundum.jpg',
-		'health' : '500',
+		'health' : 500,
 		'attack' : Math.ceil(Math.random() * 85),
-		'defense' : Math.random() * 85,
-		'critical' : Math.random() * 10
+		'defense' : Math.random() * .85,
+		'critical' : Math.random() * .10
 	},
 	{
 		'UID': 11,
 		'name': 'JDG-00X Devil Gundam',
 		'img': '/img/DevilGundam_profile.png',
-		'health' : '666',
+		'health' : 666,
 		'attack' : Math.ceil(Math.random() * 95),
-		'defense' : Math.random() * 55,
-		'critical' : Math.random() * 15
+		'defense' : Math.random() * .55,
+		'critical' : Math.random() * .15
 	},
 	{
 		'UID': 12,
 		'name': 'SR-71 Blackbird',
 		'img': '/img/sr71.jpg',
-		'health' : '200',
+		'health' : 200,
 		'attack' : Math.ceil(Math.random() * 5),
-		'defense' : Math.random() * 90,
-		'critical' : Math.random() * 5
+		'defense' : Math.random() * .90,
+		'critical' : Math.random() * .5
 	},
 	{
 		'UID': 13,
 		'name': 'Death Star',
 		'img': '/img/deathstar.jpg',
-		'health' : '5000',
+		'health' : 5000,
 		'attack' : Math.ceil(Math.random() * 75),
-		'defense' : Math.random() * 0,
-		'critical' : Math.random() * 10
+		'defense' : Math.random() * .0,
+		'critical' : Math.random() * .10
 	}
 ]
-
-var team1 = [
-	{
-		name: "B-1 Lancer (General)",
-		health: 350,
-		attack: Math.ceil(Math.random() * 40 + 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "F-15 Eagle",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	}
-];
-
-var team2 = [
-	{
-		name: "Tu-160 White Swan (General)",
-		health: 350,
-		attack: Math.ceil(Math.random() * 40 + 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	},
-	{
-		name: "Su-35 Flanker-E",
-		health: 100,
-		attack: Math.ceil(Math.random() * 10),
-		defense: Math.random() * .9,
-		critical: Math.random() * .35
-	}
-];
 
 
 // grab data from squadrons table using ajax
@@ -277,11 +131,14 @@ var team1Choice;
 var team2Choice;
 var team1b = [];
 var team2b = [];
-var team1Real = [];
-var team2Real = [];
+var team1 = [];
+var team2 = [];
 
 function getPlanes1() {
 	team1b = [];
+	team1 = [];
+	var test;
+	var test2;
 	fetch("/api/planes")
 		.then(function(response) {
 			response.json().then(function(data2) {
@@ -293,13 +150,14 @@ function getPlanes1() {
 				for(let i = 0; i < team1b.length; i++) {
 					for(let g = 0; g < planes.length; g++) {
 						if (team1b[i] === planes[g].UID) {
-							team1Real.push(planes[g]);
+							team1.push(planes[g]);
 						}
 					}
 				}
-				var test = JSON.stringify(team1Real);
-				var test2 = JSON.parse(test);
+				test = JSON.stringify(team1);
+				test2 = JSON.parse(test);
 				console.log(test2);
+				render();
 			});
 		})
 }
@@ -309,6 +167,10 @@ function getPlanes1() {
 
 
 function getPlanes2() {
+	team2b = [];
+	team2 = [];
+	var test3;
+	var test4;
 	fetch("/api/planes")
 		.then(function(data2) {
 			data2.json().then(function(data2) {
@@ -320,13 +182,14 @@ function getPlanes2() {
 				for(let i = 0; i < team2b.length; i++) {
 					for(let g = 0; g < planes.length; g++) {
 						if (team2b[i] === planes[g].UID) {
-							team2Real.push(planes[g]);
+							team2.push(planes[g]);
 						}
 					}
 				}
-				var test3 = JSON.stringify(team2Real);
-				var test4 = JSON.parse(test3);
+				test3 = JSON.stringify(team2);
+				test4 = JSON.parse(test3);
 				console.log(test4);
+				render();
 			});
 		})
 	
@@ -359,25 +222,8 @@ function databaseConvertor() {
 
 databaseConvertor();
 
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function hpBars(i) {
-	if (team1[i].health <= 100 && team1[i].health > 60) {
+function hpBars1(i) {
+	if (team1[i].health <= 5000 && team1[i].health > 60) {
 		$(".team1unitHP" + i).css("background-color", "green").css("width", "100%");
 	}
 	if (team1[i].health <= 60 && team1[i].health > 30) {
@@ -386,9 +232,10 @@ function hpBars(i) {
 	if (team1[i].health <= 30 && team1[i].health > 0) {
 		$(".team1unitHP" + i).css("background-color", "red").css("width", "30%");
 	}
+}
 
-
-	if (team2[i].health <= 100 && team2[i].health > 60) {
+function hpBars2(i) {
+	if (team2[i].health <= 5000 && team2[i].health > 60) {
 		$(".team2unitHP" + i).css("background-color", "green").css("width", "100%");
 	}
 	if (team2[i].health <= 60 && team2[i].health > 30) {
@@ -397,30 +244,9 @@ function hpBars(i) {
 	if (team2[i].health <= 30 && team2[i].health > 0) {
 		$(".team2unitHP" + i).css("background-color", "red").css("width", "30%");
 	}
-
-	//Team 1 General HP bar
-	if (team1[0].health <= 350 && team1[0].health > 210) {
-		$(".team1unitHP0").css("background-color", "green").css("width", "100%");
-	}
-	if (team1[0].health <= 210 && team1[0].health > 126) {
-		$(".team1unitHP0").css("background-color", "yellow").css("width", "60%");
-	}
-	if (team1[0].health <= 126 && team1[0].health > 0) {
-		$(".team1unitHP0").css("background-color", "red").css("width", "30%");
-	}
-
-	//Team 2 General HP bar
-	if (team2[0].health <= 350 && team2[0].health > 210) {
-		$(".team2unitHP0").css("background-color", "green").css("width", "100%");
-	}
-	if (team2[0].health <= 210 && team2[0].health > 126) {
-		$(".team2unitHP0").css("background-color", "yellow").css("width", "60%");
-	}
-	if (team2[0].health <= 126 && team2[0].health > 0) {
-		$(".team2unitHP0").css("background-color", "red").css("width", "30%");
-	}
-
 }
+
+
 function render() {
 	//remove negative numbers and replace them with 0
 	for (let i = 0; i < team1.length; i++) {
@@ -466,7 +292,7 @@ function render() {
 		team1Health = team1Health + team1[i].health;
         
 
-		hpBars(i);
+		hpBars1(i);
 	}
 	team1CritAvg = team1Crit / team1.length;
 	team1DodgeAvg = team1Dodge / team1.length;
@@ -497,7 +323,7 @@ function render() {
 		team2Crit = team2Crit + team2[i].critical;
 		team2Dodge = team2Dodge + team2[i].defense;
 		team2Health = team2Health + team2[i].health;
-		hpBars(i);
+		hpBars2(i);
 	}
 	team2CritAvg = team2Crit / team2.length;
 	team2DodgeAvg = team2Dodge / team2.length;
