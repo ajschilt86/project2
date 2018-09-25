@@ -16,8 +16,8 @@ header.masthead {
   }
   .video {
     z-index: 0;
-    position: relative;
-    top: 0px;
+    position: fixed;
+    top: -100px;
     left: 0px;
     min-width: 100%;
     min-height: 100%;

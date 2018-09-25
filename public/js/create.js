@@ -79,7 +79,7 @@ $(document).ready(function () {
             'img': '/img/mig35.jpg',
             'hp': '100',
             'attack': '10',
-            'evasion': '35',
+            'evasion': '45',
             'crit': '35%'
         },
         {
@@ -97,7 +97,7 @@ $(document).ready(function () {
             'img': '/img/s400.jpg',
             'hp': '30',
             'attack': '50',
-            'evasion': '10',
+            'evasion': '15',
             'crit': '80%'
         },
         {
@@ -115,17 +115,17 @@ $(document).ready(function () {
             'img': '/img/godGundum.jpg',
             'hp': '500',
             'attack': '85',
-            'evasion': '85',
-            'crit': '10%'
+            'evasion': '75',
+            'crit': '35%'
         },
         {
             'UID': 11,
             'name': 'JDG-00X Devil Gundam',
             'img': '/img/DevilGundam_profile.png',
             'hp': '666',
-            'attack': '95',
+            'attack': '205',
             'evasion': '55',
-            'crit': '15%'
+            'crit': '5%'
         },
         {
             'UID': 12,
@@ -140,7 +140,7 @@ $(document).ready(function () {
             'UID': 13,
             'name': 'Death Star',
             'img': '/img/deathstar.jpg',
-            'hp': '5000',
+            'hp': '10000',
             'attack': '75',
             'evasion': '0',
             'crit': '10%'

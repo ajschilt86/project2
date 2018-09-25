@@ -164,8 +164,8 @@ var planes = [
     'defenseValueMax': .9,
     'defenseValueMin': .6,
     'defense': Math.random() * .90,
-    'criticalValue': .5,
-    'critical': Math.random() * .5
+    'criticalValue': .15,
+    'critical': Math.random() * .15
   },
   {
     'UID': 13,
