@@ -273,29 +273,52 @@ var team2 = [
 // fight
 // reset after match is over
 
-$.get("/api/squadron", function(data) {
-	for (let i = 0; i < data.length; i++) {
-		$("#squadronSelector1").append("<option>" + data[i].Name + " </option>")
-		$("#squadronSelector2").append("<option>" + data[i].Name + " </option>")
-	}
-});
+var team1Choice;
+var team2Choice;
+var team1b = [];
 
-$("#squadronSelector1").change(function () {
-	var team1Choice = $("#squadronSelector1").val();
-	console.log("t1: " + team1Choice);
-});
+function getPlanes() {
+	fetch("/api/planes")
+		.then(function(data2) {
+			console.log(data2);
+			for (var i = 0; i < data2.length; i++) {
+				if (team1Choice === data2[i].Name) {
+					team1b.push(data2[i].pID);W
+				}
+				console.log("TEST2");
+			}
+			console.log(team1b);
+		})
+}
 
-$("#squadronSelector2").change(function () {
-	var team2Choice = $("#squadronSelector2").val();
-	console.log("t2: " + team2Choice);
-});
+function databaseConvertor() {
+	$.get("/api/squadron", function(data) {
+		for (let i = 0; i < data.length; i++) {
+			$("#squadronSelector1").append("<option>" + data[i].Name + " </option>")
+			$("#squadronSelector2").append("<option>" + data[i].Name + " </option>")
+		}
+	});
+
+	$("#squadronSelector1").change(function () {
+		team1Choice = $("#squadronSelector1").val();
+		getPlanes();
+	});
+
+	$("#squadronSelector2").change(function () {
+		team2Choice = $("#squadronSelector2").val();
+	});
+	
+}
 
 
 
+
+
+
+databaseConvertor();
 
 	
 	
-
 
 
 
