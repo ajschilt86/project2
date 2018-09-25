@@ -293,13 +293,14 @@ function render() {
     } else {
         for (let g = 0; g < planes.length; g++) {
           if (team1[i].UID === planes[g].UID) {
-            team1[i].attack = Math.ceil(Math.random() * planes[g].attackValueMax + planes[g].attackValueMin);
-            team1[i].defense = Math.random() * planes[g].defenseValueMax + planes[g].defenseValueMin;
+            team1[i].attack = Math.ceil(Math.random() * (planes[g].attackValueMax - planes[g].attackValueMin) + planes[g].attackValueMin);
+            team1[i].defense = Math.random() * (planes[g].defenseValueMax - planes[g].defenseValueMin) + planes[g].defenseValueMin;
             team1[i].critical = Math.random() * planes[g].criticalValue;
           }
         }
     }
   }
+
   //remove negative numbers and replace them with 0
   for (let i = 0; i < team2.length; i++) {
     if (team2[i].health < 0) {
@@ -307,8 +308,8 @@ function render() {
     } else {
       for (let g = 0; g < planes.length; g++) {
         if (team2[i].UID === planes[g].UID) {
-          team2[i].attack = Math.ceil(Math.random() * planes[g].attackValueMax + planes[g].attackValueMin);
-          team2[i].defense = Math.random() * planes[g].defenseValueMax + planes[g].defenseValueMin;
+          team2[i].attack = Math.ceil(Math.random() * (planes[g].attackValueMax - planes[g].attackValueMin) + planes[g].attackValueMin);
+          team2[i].defense = Math.random() * (planes[g].defenseValueMax - planes[g].defenseValueMin) + planes[g].defenseValueMin;
           team2[i].critical = Math.random() * planes[g].criticalValue;
         }
       }
