@@ -131,7 +131,104 @@ var team1Choice;
 var team2Choice;
 var team1b = [];
 var team2b = [];
-var team1 = [];
+var team1 = [
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	},
+	{
+		'UID': 7,
+		'name': 'Su-27 Flanker',
+		'img': '/img/su27.jpg',
+		'health' : 100,
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * .30,
+		'critical' : Math.random() * .10
+	}
+
+];
+
+
+
+
+
 var team2 = [];
 
 function getPlanes1() {
@@ -150,7 +247,7 @@ function getPlanes1() {
 				for(let i = 0; i < team1b.length; i++) {
 					for(let g = 0; g < planes.length; g++) {
 						if (team1b[i] === planes[g].UID) {
-							team1.push(planes[g]);
+							// team1.push(planes[g]);
 						}
 					}
 				}
@@ -185,6 +282,7 @@ function getPlanes2() {
 							team2.push(planes[g]);
 						}
 					}
+					
 				}
 				test3 = JSON.stringify(team2);
 				test4 = JSON.parse(test3);
