@@ -171,10 +171,10 @@ var planes = [
     'UID': 13,
     'name': 'Death Star',
     'img': '/img/deathstar.jpg',
-    'health': 5000,
-    'attackValueMax': 75,
-    'attackValueMin': 20,
-    'attack': Math.ceil(Math.random() * 75 + 20),
+    'health': 10000,
+    'attackValueMax': 125,
+    'attackValueMin': 75,
+    'attack': Math.ceil(Math.random() * 125 + 75),
     'defenseValueMax': .0,
     'defenseValueMin': .0,
     'defense': Math.random() * .0,
@@ -262,7 +262,7 @@ function databaseConvertor() {
 databaseConvertor();
 
 function hpBars1(i) {
-  if (team1[i].health <= 5000 && team1[i].health > 60) {
+  if (team1[i].health <= 10000 && team1[i].health > 60) {
     $(".team1unitHP" + i).css("background-color", "green").css("width", "100%");
   }
   if (team1[i].health <= 60 && team1[i].health > 30) {
@@ -274,7 +274,7 @@ function hpBars1(i) {
 }
 
 function hpBars2(i) {
-  if (team2[i].health <= 5000 && team2[i].health > 60) {
+  if (team2[i].health <= 10000 && team2[i].health > 60) {
     $(".team2unitHP" + i).css("background-color", "green").css("width", "100%");
   }
   if (team2[i].health <= 60 && team2[i].health > 30) {
