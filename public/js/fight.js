@@ -2,7 +2,7 @@ var planes = [
   {
     'UID': 1,
     'name': 'Su-35 Flanker-E',
-    'img': '../img/su-35.jpg',
+    'img': '/img/su-35.jpg',
     'health': 100,
     'attack': Math.ceil(Math.random() * 10),
     'defense': Math.random() * .35,
@@ -246,6 +246,7 @@ function render() {
   var team1Dodge = 0;
   var team1DodgeAvg = 0;
   var team1Health = 0;
+  var team1Length = 0;
   for (let i = 0; i < team1.length; i++) {
     if (team1[i].health <= 0) {
       $(".team1Stats" + i).html("<p class='kia'>" + team1[i].name + " was KIA!</p>");
@@ -258,14 +259,17 @@ function render() {
         + (team1[i].critical * 100).toFixed(0) + "%)</p></div");
       $(".t1picWrapper" + i).html("<img src='" + team1[i].img + "' width='60px' class='img'>");
     }
-    team1Attack = team1Attack + team1[i].attack;
-    team1Crit = team1Crit + team1[i].critical;
-    team1Dodge = team1Dodge + team1[i].defense;
-    team1Health = team1Health + team1[i].health;
+    if (team1[i].health > 0) {
+      team1Attack = team1Attack + team1[i].attack;
+      team1Crit = team1Crit + team1[i].critical;
+      team1Dodge = team1Dodge + team1[i].defense;
+      team1Health = team1Health + team1[i].health;
+      team1Length++;
+    }
     hpBars1(i);
   }
-  team1CritAvg = team1Crit / team1.length;
-  team1DodgeAvg = team1Dodge / team1.length;
+  team1CritAvg = team1Crit / team1Length;
+  team1DodgeAvg = team1Dodge / team1Length;
   $(".tOneTotalAttack").html(team1Attack);
   $(".tOneTotalCrit").html((team1CritAvg * 100).toFixed(0) + "%");
   $(".tOneTotalDodge").html((team1DodgeAvg * 100).toFixed(0) + "%");
@@ -278,6 +282,7 @@ function render() {
   var team2Dodge = 0;
   var team2DodgeAvg = 0;
   var team2Health = 0;
+  var team2Length = 0;
   for (let i = 0; i < team2.length; i++) {
     if (team2[i].health <= 0) {
       $(".team2Stats" + i).html("<p class='kia'>" + team2[i].name + " was KIA!</p>");
@@ -290,14 +295,17 @@ function render() {
         + (team2[i].critical * 100).toFixed(0) + "%)</p></div");
       $(".t2picWrapper" + i).html("<img src='" + team2[i].img + "' width='60px' class='img'>");
     }
-    team2Attack = team2Attack + team2[i].attack;
-    team2Crit = team2Crit + team2[i].critical;
-    team2Dodge = team2Dodge + team2[i].defense;
-    team2Health = team2Health + team2[i].health;
+    if (team2[i].health > 0) {
+      team2Attack = team2Attack + team2[i].attack;
+      team2Crit = team2Crit + team2[i].critical;
+      team2Dodge = team2Dodge + team2[i].defense;
+      team2Health = team2Health + team2[i].health;
+      team2Length++;
+    }
     hpBars2(i);
   }
-  team2CritAvg = team2Crit / team2.length;
-  team2DodgeAvg = team2Dodge / team2.length;
+  team2CritAvg = team2Crit / team2Length;
+  team2DodgeAvg = team2Dodge / team2Length;
   $(".tTwoTotalAttack").html(team2Attack);
   $(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
   $(".tTwoTotalDodge").html((team2DodgeAvg * 100).toFixed(0) + "%");
