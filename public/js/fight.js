@@ -4,8 +4,13 @@ var planes = [
     'name': 'Su-35 Flanker-E',
     'img': '/img/su-35.jpg',
     'health': 100,
+    'attackValueMax': 10,
+    'attackValueMin': 1,
     'attack': Math.ceil(Math.random() * 10),
+    'defenseValueMax': .35,
+    'defenseValueMin': .5,
     'defense': Math.random() * .35,
+    'criticalValue': .35,
     'critical': Math.random() * .35
   },
   {
@@ -13,8 +18,13 @@ var planes = [
     'name': 'F-117 Nighthawk',
     'img': '/img/stealth-fighter.jpg',
     'health': 100,
+    'attackValueMax': 5,
+    'attackValueMin': 1,
     'attack': Math.ceil(Math.random() * 5),
+    'defenseValueMax': .8,
+    'defenseValueMin': .5,
     'defense': Math.random() * .80,
+    'criticalValue': .15,
     'critical': Math.random() * .15
   },
   {
@@ -22,8 +32,13 @@ var planes = [
     'name': 'F-15 Eagle',
     'img': '/img/f-15.jpg',
     'health': 100,
+    'attackValueMax': 12,
+    'attackValueMin': 8,
     'attack': Math.ceil(Math.random() * 12),
+    'defenseValueMax': .3,
+    'defenseValueMin': .1,
     'defense': Math.random() * .30,
+    'criticalValue': .4,
     'critical': Math.random() * .40
   },
   {
@@ -31,8 +46,13 @@ var planes = [
     'name': 'F-22 Raptor',
     'img': '/img/f-22.jpg',
     'health': 100,
+    'attackValueMax': 15,
+    'attackValueMin': 10,
     'attack': Math.ceil(Math.random() * 15),
+    'defenseValueMax': .9,
+    'defenseValueMin': .6,
     'defense': Math.random() * .90,
+    'criticalValue': .15,
     'critical': Math.random() * .15
   },
   {
@@ -40,8 +60,13 @@ var planes = [
     'name': 'Su-57 PAK FA',
     'img': '/img/su-57.jpg',
     'health': 100,
+    'attackValueMax': 13,
+    'attackValueMin': 10,
     'attack': Math.ceil(Math.random() * 13),
+    'defenseValueMax': .85,
+    'defenseValueMin': .6,
     'defense': Math.random() * .85,
+    'criticalValue': .25,
     'critical': Math.random() * .25
   },
   {
@@ -49,8 +74,13 @@ var planes = [
     'name': 'Mig-35 Fulcrum',
     'img': '/img/mig35.jpg',
     'health': 100,
+    'attackValueMax': 10,
+    'attackValueMin': 1,
     'attack': Math.ceil(Math.random() * 10),
-    'defense': Math.random() * .35,
+    'defenseValueMax': .45,
+    'defenseValueMin': .2,
+    'defense': Math.random() * .45,
+    'criticalValue': .35,
     'critical': Math.random() * .35
   },
   {
@@ -58,8 +88,13 @@ var planes = [
     'name': 'Su-27 Flanker',
     'img': '/img/su27.jpg',
     'health': 100,
+    'attackValueMax': 8,
+    'attackValueMin': 1,
     'attack': Math.ceil(Math.random() * 8),
+    'defenseValueMax': .3,
+    'defenseValueMin': .1,
     'defense': Math.random() * .30,
+    'criticalValue': .1,
     'critical': Math.random() * .10
   },
   {
@@ -67,8 +102,13 @@ var planes = [
     'name': 'S-400 Triumph',
     'img': '/img/s400.jpg',
     'health': 30,
+    'attackValueMax': 50,
+    'attackValueMin': 40,
     'attack': Math.ceil(Math.random() * 50 + 40),
+    'defenseValueMax': .15,
+    'defenseValueMin': .1,
     'defense': Math.random() * .15,
+    'criticalValue': .8,
     'critical': Math.random() * .80
   },
   {
@@ -76,8 +116,13 @@ var planes = [
     'name': 'MIM-104 Patriot',
     'img': '/img/Patriot.jpg',
     'health': 35,
+    'attackValueMax': 60,
+    'attackValueMin': 40,
     'attack': Math.ceil(Math.random() * 60 + 40),
+    'defenseValueMax': .5,
+    'defenseValueMin': .1,
     'defense': Math.random() * .5,
+    'criticalValue': .85,
     'critical': Math.random() * .85
   },
   {
@@ -85,8 +130,13 @@ var planes = [
     'name': 'GF13-017NJII God Gundam',
     'img': '/img/godGundum.jpg',
     'health': 500,
+    'attackValueMax': 85,
+    'attackValueMin': 65,
     'attack': Math.ceil(Math.random() * 85),
+    'defenseValueMax': .85,
+    'defenseValueMin': .5,
     'defense': Math.random() * .85 + .5,
+    'criticalValue': .35,
     'critical': Math.random() * .35
   },
   {
@@ -94,8 +144,13 @@ var planes = [
     'name': 'JDG-00X Devil Gundam',
     'img': '/img/DevilGundam_profile.png',
     'health': 666,
+    'attackValueMax': 95,
+    'attackValueMin': 75,
     'attack': Math.ceil(Math.random() * 95),
-    'defense': Math.random() * .55,
+    'defenseValueMax': .55,
+    'defenseValueMin': .35,
+    'defense': Math.random() * .55 + .35,
+    'criticalValue': .5,
     'critical': Math.random() * .5
   },
   {
@@ -103,8 +158,13 @@ var planes = [
     'name': 'SR-71 Blackbird',
     'img': '/img/sr71.jpg',
     'health': 200,
+    'attackValueMax': 5,
+    'attackValueMin': 1,
     'attack': Math.ceil(Math.random() * 5),
+    'defenseValueMax': .9,
+    'defenseValueMin': .6,
     'defense': Math.random() * .90,
+    'criticalValue': .5,
     'critical': Math.random() * .5
   },
   {
@@ -112,8 +172,13 @@ var planes = [
     'name': 'Death Star',
     'img': '/img/deathstar.jpg',
     'health': 5000,
-    'attack': Math.ceil(Math.random() * 75),
+    'attackValueMax': 75,
+    'attackValueMin': 20,
+    'attack': Math.ceil(Math.random() * 75 + 20),
+    'defenseValueMax': .0,
+    'defenseValueMin': .0,
     'defense': Math.random() * .0,
+    'criticalValue': .1,
     'critical': Math.random() * .10
   }
 ]
@@ -226,8 +291,13 @@ function render() {
     if (team1[i].health < 0) {
       team1[i].health = 0;
     } else {
-      team1[i].defense = Math.random() * .9;
-      team1[i].critical = Math.random() * .35;
+        for (let g = 0; g < planes.length; g++) {
+          if (team1[i].UID === planes[g].UID) {
+            team1[i].attack = Math.ceil(Math.random() * planes[g].attackValueMax + planes[g].attackValueMin);
+            team1[i].defense = Math.random() * planes[g].defenseValueMax + planes[g].defenseValueMin;
+            team1[i].critical = Math.random() * planes[g].criticalValue;
+          }
+        }
     }
   }
   //remove negative numbers and replace them with 0
@@ -235,8 +305,13 @@ function render() {
     if (team2[i].health < 0) {
       team2[i].health = 0;
     } else {
-      team2[i].defense = Math.random() * .9;
-      team2[i].critical = Math.random() * .35;
+      for (let g = 0; g < planes.length; g++) {
+        if (team2[i].UID === planes[g].UID) {
+          team2[i].attack = Math.ceil(Math.random() * planes[g].attackValueMax + planes[g].attackValueMin);
+          team2[i].defense = Math.random() * planes[g].defenseValueMax + planes[g].defenseValueMin;
+          team2[i].critical = Math.random() * planes[g].criticalValue;
+        }
+      }
     }
   }
   //display team 1 health and stats
