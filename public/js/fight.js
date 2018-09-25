@@ -3,118 +3,118 @@ var planes = [
 		'UID': 1,
 		'name': 'Su-35 Flanker-E',
 		'img': '/img/su-35.jpg',
-		'hp' : '100',
-		'attack' : '10',
-		'evasion' : '35',
-		'crit' : '35%'
+		'health' : '100',
+		'attack' : Math.ceil(Math.random() * 10),
+		'defense' : Math.random() * 35,
+		'critical' : Math.random() * 35
 	},
 	{
 		'UID': 2,
 		'name': 'F-117 Nighthawk',
 		'img': '/img/stealth-fighter.jpg',
-		'hp' : '100',
-		'attack' : '5',
-		'evasion' : '80',
-		'crit' : '15%'
+		'health' : '100',
+		'attack' : Math.ceil(Math.random() * 5),
+		'defense' : Math.random() * 80,
+		'critical' : Math.random() * 15
 	},
 	{
 		'UID': 3,
 		'name': 'F-15 Eagle',
 		'img': '/img/f-15.jpg',
-		'hp' : '100',
-		'attack' : '12',
-		'evasion' : '30',
-		'crit' : '40%'
+		'health' : '100',
+		'attack' : Math.ceil(Math.random() * 12),
+		'defense' : Math.random() * 30,
+		'critical' : Math.random() * 40
 	},
 	{
 		'UID': 4,
 		'name': 'F-22 Raptor',
 		'img': '/img/f-22.jpg',
-		'hp' : '100',
-		'attack' : '15',
-		'evasion' : '90',
-		'crit' : '15%'
+		'health' : '100',
+		'attack' : Math.ceil(Math.random() * 15),
+		'defense' : Math.random() * 90,
+		'critical' : Math.random() * 15
 	},
 	{
 		'UID': 5,
 		'name': 'Su-57 PAK FA',
 		'img': '/img/su-57.jpg',
-		'hp' : '100',
-		'attack' : '13',
-		'evasion' : '85',
-		'crit' : '25%'
+		'health' : '100',
+		'attack' : Math.ceil(Math.random() * 13),
+		'defense' : Math.random() * 85,
+		'critical' : Math.random() * 25
 	},
 	{
 		'UID': 6,
 		'name': 'Mig-35 Fulcrum',
 		'img': '/img/mig35.jpg',
-		'hp' : '100',
-		'attack' : '10',
-		'evasion' : '35',
-		'crit' : '35%'
+		'health' : '100',
+		'attack' : Math.ceil(Math.random() * 10),
+		'defense' : Math.random() * 35,
+		'critical' : Math.random() * 35
 	},
 	{
 		'UID': 7,
 		'name': 'Su-27 Flanker',
 		'img': '/img/su27.jpg',
-		'hp' : '100',
-		'attack' : '8',
-		'evasion' : '30',
-		'crit' : '10%'
+		'health' : '100',
+		'attack' : Math.ceil(Math.random() * 8),
+		'defense' : Math.random() * 30,
+		'critical' : Math.random() * 10
 	},
 	{
 		'UID': 8,
 		'name': 'S-400 Triumph',
 		'img': '/img/s400.jpg',
-		'hp' : '30',
-		'attack' : '50',
-		'evasion' : '10',
-		'crit' : '80%'
+		'health' : '30',
+		'attack' : Math.ceil(Math.random() * 50),
+		'defense' : Math.random() * 10,
+		'critical' : Math.random() * 80
 	},
 	{
 		'UID': 9,
 		'name': 'MIM-104 Patriot',
 		'img': '/img/Patriot.jpg',
-		'hp' : '35',
-		'attack' : '60',
-		'evasion' : '5',
-		'crit' : '85%'
+		'health' : '35',
+		'attack' : Math.ceil(Math.random() * 60),
+		'defense' : Math.random() * 5,
+		'critical' : Math.random() * 85
 	},
 	{
 		'UID': 10,
 		'name': 'GF13-017NJII God Gundam',
 		'img': '/img/godGundum.jpg',
-		'hp' : '500',
-		'attack' : '85',
-		'evasion' : '85',
-		'crit' : '10%'
+		'health' : '500',
+		'attack' : Math.ceil(Math.random() * 85),
+		'defense' : Math.random() * 85,
+		'critical' : Math.random() * 10
 	},
 	{
 		'UID': 11,
 		'name': 'JDG-00X Devil Gundam',
 		'img': '/img/DevilGundam_profile.png',
-		'hp' : '666',
-		'attack' : '95',
-		'evasion' : '55',
-		'crit' : '15%'
+		'health' : '666',
+		'attack' : Math.ceil(Math.random() * 95),
+		'defense' : Math.random() * 55,
+		'critical' : Math.random() * 15
 	},
 	{
 		'UID': 12,
 		'name': 'SR-71 Blackbird',
 		'img': '/img/sr71.jpg',
-		'hp' : '200',
-		'attack' : '5',
-		'evasion' : '90',
-		'crit' : '5%'
+		'health' : '200',
+		'attack' : Math.ceil(Math.random() * 5),
+		'defense' : Math.random() * 90,
+		'critical' : Math.random() * 5
 	},
 	{
 		'UID': 13,
 		'name': 'Death Star',
 		'img': '/img/deathstar.jpg',
-		'hp' : '5000',
-		'attack' : '75',
-		'evasion' : '0',
-		'crit' : '10%'
+		'health' : '5000',
+		'attack' : Math.ceil(Math.random() * 75),
+		'defense' : Math.random() * 0,
+		'critical' : Math.random() * 10
 	}
 ]
 
@@ -276,22 +276,60 @@ var team2 = [
 var team1Choice;
 var team2Choice;
 var team1b = [];
+var team2b = [];
+var team1Real = [];
+var team2Real = [];
 
-function getPlanes() {
+function getPlanes1() {
+	team1b = [];
 	fetch("/api/planes")
-		.then(function(data2) {
-			data2.json().then(function(data2) {
-				let test = data2.results;
-				console.log("test " + test);
+		.then(function(response) {
+			response.json().then(function(data2) {
 				for (var i = 0; i < data2.length; i++) {
 					if (team1Choice === data2[i].Name) {
 						team1b.push(data2[i].pID);
 					}
-					console.log("TEST2");
 				}
-				console.log(team1b);
+				for(let i = 0; i < team1b.length; i++) {
+					for(let g = 0; g < planes.length; g++) {
+						if (team1b[i] === planes[g].UID) {
+							team1Real.push(planes[g]);
+						}
+					}
+				}
+				var test = JSON.stringify(team1Real);
+				var test2 = JSON.parse(test);
+				console.log(test2);
 			});
 		})
+}
+
+
+
+
+
+function getPlanes2() {
+	fetch("/api/planes")
+		.then(function(data2) {
+			data2.json().then(function(data2) {
+				for (var i = 0; i < data2.length; i++) {
+					if (team2Choice === data2[i].Name) {
+						team2b.push(data2[i].pID);
+					}
+				}
+				for(let i = 0; i < team2b.length; i++) {
+					for(let g = 0; g < planes.length; g++) {
+						if (team2b[i] === planes[g].UID) {
+							team2Real.push(planes[g]);
+						}
+					}
+				}
+				var test3 = JSON.stringify(team2Real);
+				var test4 = JSON.parse(test3);
+				console.log(test4);
+			});
+		})
+	
 }
 
 function databaseConvertor() {
@@ -304,11 +342,12 @@ function databaseConvertor() {
 
 	$("#squadronSelector1").change(function () {
 		team1Choice = $("#squadronSelector1").val();
-		getPlanes();
+		getPlanes1();
 	});
 
 	$("#squadronSelector2").change(function () {
 		team2Choice = $("#squadronSelector2").val();
+		getPlanes2();
 	});
 	
 }
