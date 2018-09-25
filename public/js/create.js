@@ -1,9 +1,15 @@
 $(document).ready(function () {
 
+    //for the modal and its manipulation
+    var modal = $(".modal");
+    var modalTitle = $(".modal-title");
+    var modalText = $(".modal-body");
+
     //arrays
     var planeArray = [];
     var playerChoice = [];
 
+    //This is the image list for the respective
     var planeImgList = [
         '/img/su-35.jpg',
         '/img/stealth-fighter.jpg',
@@ -20,6 +26,7 @@ $(document).ready(function () {
         '/img/deathstar.jpg'
     ];
 
+    //This be the planes, hi jacob and sam
     var planes = [
         {
             'UID': 1,
@@ -124,10 +131,10 @@ $(document).ready(function () {
             'UID': 12,
             'name': 'SR-71 Blackbird',
             'img': '/img/sr71.jpg',
-            'hp' : '200',
-            'attack' : '5',
-            'evasion' : '90',
-            'crit' : '5%'
+            'hp': '200',
+            'attack': '5',
+            'evasion': '90',
+            'crit': '5%'
         },
         {
             'UID': 13,
@@ -138,7 +145,7 @@ $(document).ready(function () {
             'evasion': '0',
             'crit': '10%'
         }
-    ]
+    ];
 
     //Pushes all the planes to the plane array
     planes.forEach((element) => {
@@ -159,8 +166,7 @@ $(document).ready(function () {
         $('#plane--name--1').text(`Name: ${planes[val].name}`);
         $('#plane--hp--1').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--1').text(`Attack: ${planes[val].attack}`);
-        $('#plane--defense--1').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--1').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--1').text(`Evasion: ${planes[val].evasion}`);
         $('#plane--eva--1').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -172,7 +178,7 @@ $(document).ready(function () {
         $('#plane--hp--2').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--2').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--2').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--2').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--2').text(`Evasion: ${planes[val].evasion}`);
         $('#plane--eva--2').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -184,7 +190,7 @@ $(document).ready(function () {
         $('#plane--hp--3').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--3').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--3').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--3').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--3').text(`Evasion: ${planes[val].evasion}`);
         $('#plane--eva--3').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -196,7 +202,7 @@ $(document).ready(function () {
         $('#plane--hp--4').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--4').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--4').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--4').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--4').text(`Evasion:  ${planes[val].evasion}`);
         $('#plane--eva--4').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -208,7 +214,7 @@ $(document).ready(function () {
         $('#plane--hp--5').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--5').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--5').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--5').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--5').text(`Evasion:  ${planes[val].evasion}`);
         $('#plane--eva--5').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -220,7 +226,7 @@ $(document).ready(function () {
         $('#plane--hp--6').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--6').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--6').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--6').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--6').text(`Evasion:  ${planes[val].evasion}`);
         $('#plane--eva--6').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -232,7 +238,7 @@ $(document).ready(function () {
         $('#plane--hp--7').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--7').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--7').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--7').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--7').text(`Evasion:  ${planes[val].evasion}`);
         $('#plane--eva--7').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -244,7 +250,7 @@ $(document).ready(function () {
         $('#plane--hp--8').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--8').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--8').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--8').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--8').text(`Evasion:  ${planes[val].evasion}`);
         $('#plane--eva--8').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -256,7 +262,7 @@ $(document).ready(function () {
         $('#plane--hp--9').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--9').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--9').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--9').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--9').text(`Evasion:  ${planes[val].evasion}`);
         $('#plane--eva--9').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -268,7 +274,7 @@ $(document).ready(function () {
         $('#plane--hp--10').text(`HP: ${planes[val].hp}`);
         $('#plane--attack--10').text(`Attack: ${planes[val].attack}`);
         $('#plane--defense--10').text(`Defense: ${planes[val].defense}`);
-        $('#plane--crit--10').text(`Evasion %: ${planes[val].evasion}`);
+        $('#plane--crit--10').text(`Evasion:  ${planes[val].evasion}`);
         $('#plane--eva--10').text(`Crit: ${planes[val].crit}`);
     });
 
@@ -282,19 +288,68 @@ $(document).ready(function () {
         $('.plane--name').text('Name: Select a unit!');
         $('.plane--hp').text('HP: Select a unit!');
         $('.plane--attack').text('Attack: Select a unit!');
-        $('.plane--eva').text('Evasion %: Select a unit!');
+        $('.plane--eva').text('Evasion:  Select a unit!');
     });
 
+    $('.modal--close').on('click', function (e) {
+
+        e.preventDefault();
+
+        modal.hide();
+    });
+
+    //On submit click, do something.
     $('#submit').on('click', function (e) {
 
         e.preventDefault();
 
-        var squadron = {
-            Name: $('#squad--name').val().trim()
-        }
-
+        //Variables.
+        var squadName = $('#squad--name').val().trim();
         var getPID;
 
+        //Check the name for spaces
+        var spaceCheck = function (squadName) {
+            return squadName.indexOf(' ') === -1;
+        };
+
+        //Be sure everything is alphanumeric.
+        var alphaNumCheck = function (squadName) {
+            if (/[^a-zA-Z0-9]/.test(squadName)) {
+                return false;
+            }
+            return true;
+        }
+
+        //If there are non-alphanumeric stuff in squadname, do a check.
+        if (alphaNumCheck(squadName) === false) {
+            modal.show();
+            modalTitle.text("Failure to Launch!");
+            modalText.text(`Your Squadron name must be alphanumeric.`);
+            return;
+        }
+
+        //If their are spaces in the name, be sure to tell the user to fill it in
+        if (spaceCheck(squadName) === false || squadName === "") {
+            modal.show();
+            modalTitle.text("Failure to Launch!");
+            modalText.text(`You can't have any spaces in your Squadron name. It also can not be left empty`);
+            return;
+        }
+
+        //If there is an empty plane, tell the user.
+        if ($(".plane--selector").val() === " ") {
+            modal.show();
+            modalTitle.text("Failure to Launch!");
+            modalText.text(`Make sure you have a full squadron!`);
+            return;
+        }
+
+        //Getting the squadron name
+        var squadron = {
+            Name: squadName
+        }
+
+        //This loop will for set getPID to a certain ID for a certain plane and post the plane to our api
         for (let i = 1; i < 11; i++) {
             switch ($(`#plane${[i]} :selected`).text()) {
                 case "Su-35 Flanker-E":
@@ -330,7 +385,7 @@ $(document).ready(function () {
                 case "JDG-00X Devil Gundam":
                     getPID = 11;
                     break;
-                case "SR-71 Blackbird":
+                case "Trump Force One":
                     getPID = 12;
                     break;
                 case "Death Star":
@@ -341,32 +396,37 @@ $(document).ready(function () {
                     break;
             }
 
+            //This is the data that will be posted
             var postPlanes = {
-                Name: $('#squad--name').val().trim(),
+                Name: squadName,
                 planeName: $(`#plane${[i]} :selected`).text(),
                 pID: getPID
             }
 
+            //This is out post function to the plane api
             $.ajax({
                 type: "POST",
                 url: "/api/planes",
                 data: postPlanes
             }).then(function () {
-                console.log('Hey');
             });
         }
 
-        // This is working, commenting it out to try something
+        // This will post the name of the squad to the squadron api.
         $.ajax({
             type: "POST",
             url: "/api/squadron",
             data: squadron
         }).then(function () {
-            console.log('Created new squad');
         });
 
-        // $('#reset').click();
+        modal.show();
+        modalTitle.text("Success!");
+        modalText.text(`You've successfully created Squadron: ${$('#squad--name').val().trim()}. Happy hunting!`)
+
+        //On click, reset the submitted data
+        $('#reset').click();
+
+        //END SUBMIT ON CLICK
     });
 });
-
-
