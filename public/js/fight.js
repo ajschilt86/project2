@@ -280,14 +280,17 @@ var team1b = [];
 function getPlanes() {
 	fetch("/api/planes")
 		.then(function(data2) {
-			console.log(data2.json());
-			for (var i = 0; i < data2.json(); i++) {
-				if (team1Choice === data2[i].Name) {
-					team1b.push(data2[i].pID);W
+			data2.json().then(function(data2) {
+				let test = data2.results;
+				console.log("test " + test);
+				for (var i = 0; i < data2.length; i++) {
+					if (team1Choice === data2[i].Name) {
+						team1b.push(data2[i].pID);
+					}
+					console.log("TEST2");
 				}
-				console.log("TEST2");
-			}
-			console.log(team1b);
+				console.log(team1b);
+			});
 		})
 }
 
