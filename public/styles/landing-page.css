@@ -30,7 +30,7 @@ header.masthead {
   header.masthead video {
     z-index: 0;
     position: fixed;
-    top: 0px;
+    top: -100px;
     left: 0px;
     min-width: 50%;
     min-height: 100%;
