@@ -1478,7 +1478,7 @@ function render() {
       $(".team1Stats" + i).html("<div class='teamStats'><p class='team1unitName'>"
         + team1[i].name + "</p><p class='team1unitHP" + i + "'>"
         + team1[i].health + "</p><p class='team1unit'>(Attack: "
-        + team1[i].attack + ")(Block: "
+        + team1[i].attack + ")(Evasion: "
         + (team1[i].defense * 100).toFixed(0) + "%)(Crit Hit: "
         + (team1[i].critical * 100).toFixed(0) + "%)</p></div");
       $(".t1picWrapper" + i).html("<img src='" + team1[i].img + "' width='60px' class='img'>");
@@ -1494,10 +1494,10 @@ function render() {
   }
   team1CritAvg = team1Crit / team1Length;
   team1DodgeAvg = team1Dodge / team1Length;
-  $(".tOneTotalAttack").html(team1Attack);
-  $(".tOneTotalCrit").html((team1CritAvg * 100).toFixed(0) + "%");
+  $(".tOneTotalAttack").html(team1Attack);  
   $(".tOneTotalDodge").html((team1DodgeAvg * 100).toFixed(0) + "%");
   $(".tOneTotalHealth").html(team1Health);
+  $(".tOneTotalCrit").html((team1CritAvg * 100).toFixed(0) + "%");
 
   //display team 2 health and stats
   var team2Attack = 0;
@@ -1514,7 +1514,7 @@ function render() {
       $(".team2Stats" + i).html("<div class='teamStats'><p class='team2unitName'>"
         + team2[i].name + "</p><p class='team2unitHP" + i + "'>"
         + team2[i].health + "</p><p class='team2unit'>(Attack: "
-        + team2[i].attack + ")(Block: "
+        + team2[i].attack + ")(Evasion: "
         + (team2[i].defense * 100).toFixed(0) + "%)(Crit Hit: "
         + (team2[i].critical * 100).toFixed(0) + "%)</p></div");
       $(".t2picWrapper" + i).html("<img src='" + team2[i].img + "' width='60px' class='img'>");
@@ -1530,10 +1530,10 @@ function render() {
   }
   team2CritAvg = team2Crit / team2Length;
   team2DodgeAvg = team2Dodge / team2Length;
-  $(".tTwoTotalAttack").html(team2Attack);
-  $(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
+  $(".tTwoTotalAttack").html(team2Attack);  
   $(".tTwoTotalDodge").html((team2DodgeAvg * 100).toFixed(0) + "%");
   $(".tTwoTotalHealth").html(team2Health);
+  $(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
 }
 
 render();
