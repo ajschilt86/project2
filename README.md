@@ -12,3 +12,5 @@ HP: how many health points any one plane has.
 Attack: the offensive strength of the plane.
 Evasion: the % chance your plane has to evade an attack made against them.
 You have the option of choosing whatever kind of squad composition you desire. Will you go glass cannon? Will you be beefy brother? How about an evasion overlord? Do you want to fly straight into the danger zone or construct your own Squad?
+
+Click here to play: https://l337-squad-fighter.herokuapp.com
