@@ -401,12 +401,11 @@ $(".fight").click(function (event) {
     // generate rolls for both teams
     var t1DiceRoll = roll.roll('d20');
     var t2DiceRoll = roll.roll('d20');
-    console.log(t1DiceRoll);
 
     // checks to makes sure both units have health
     if (team1[i].health > 0 && team2[i].health > 0) {
       // checks to see if team1 attacks, defender does not attack
-      if (t1DiceRoll > t2DiceRoll) {
+      if (t1DiceRoll.result > t2DiceRoll.result) {
         if (Math.random() < team2[i].defense) {
           // team 2 defends attack
           team2[i].health = team2[i].health - 1;
