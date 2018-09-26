@@ -423,7 +423,8 @@ $(document).ready(function () {
 
         modal.show();
         modalTitle.text("Success!");
-        modalText.text(`You've successfully created Squadron: ${$('#squad--name').val().trim()}. Happy hunting!`)
+        modalText.text(`You've successfully created Squadron: ${$('#squad--name').val().trim()}. Happy hunting!`);
+        $(".fight").show();
 
         //On click, reset the submitted data
         $('#reset').click();
