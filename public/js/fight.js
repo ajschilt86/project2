@@ -7,6 +7,7 @@ var planes = [
     'UID': 1,
     'name': 'Su-35 Flanker-E',
     'img': '/img/su-35.jpg',
+    'healthMax': 100,
     'health': 100,
     'attackValueMax': 10,
     'attackValueMin': 1,
@@ -21,6 +22,7 @@ var planes = [
     'UID': 2,
     'name': 'F-117 Nighthawk',
     'img': '/img/stealth-fighter.jpg',
+    'healthMax': 100,
     'health': 100,
     'attackValueMax': 5,
     'attackValueMin': 1,
@@ -35,6 +37,7 @@ var planes = [
     'UID': 3,
     'name': 'F-15 Eagle',
     'img': '/img/f-15.JPG',
+    'healthMax': 100, 
     'health': 100,
     'attackValueMax': 12,
     'attackValueMin': 8,
@@ -49,6 +52,7 @@ var planes = [
     'UID': 4,
     'name': 'F-22 Raptor',
     'img': '/img/f-22.jpg',
+    'healthMax': 100,
     'health': 100,
     'attackValueMax': 15,
     'attackValueMin': 10,
@@ -63,6 +67,7 @@ var planes = [
     'UID': 5,
     'name': 'Su-57 PAK FA',
     'img': '/img/su-57.jpg',
+    'healthMax': 100,
     'health': 100,
     'attackValueMax': 13,
     'attackValueMin': 10,
@@ -77,6 +82,7 @@ var planes = [
     'UID': 6,
     'name': 'Mig-35 Fulcrum',
     'img': '/img/mig35.jpg',
+    'healthMax': 100,
     'health': 100,
     'attackValueMax': 10,
     'attackValueMin': 1,
@@ -91,6 +97,7 @@ var planes = [
     'UID': 7,
     'name': 'Su-27 Flanker',
     'img': '/img/su27.jpg',
+    'healthMax': 100,
     'health': 100,
     'attackValueMax': 8,
     'attackValueMin': 1,
@@ -105,6 +112,7 @@ var planes = [
     'UID': 8,
     'name': 'S-400 Triumph',
     'img': '/img/s400.jpg',
+    'healthMax': 30,
     'health': 30,
     'attackValueMax': 50,
     'attackValueMin': 40,
@@ -119,6 +127,7 @@ var planes = [
     'UID': 9,
     'name': 'MIM-104 Patriot',
     'img': '/img/Patriot.jpg',
+    'healthMax': 35,
     'health': 35,
     'attackValueMax': 60,
     'attackValueMin': 40,
@@ -133,6 +142,7 @@ var planes = [
     'UID': 10,
     'name': 'GF13-017NJII God Gundam',
     'img': '/img/godGundum.jpg',
+    'healthMax': 500,
     'health': 500,
     'attackValueMax': 85,
     'attackValueMin': 65,
@@ -147,6 +157,7 @@ var planes = [
     'UID': 11,
     'name': 'JDG-00X Devil Gundam',
     'img': '/img/DevilGundam_Profile.png',
+    'healthMax': 666,
     'health': 666,
     'attackValueMax': 205,
     'attackValueMin': 75,
@@ -161,6 +172,7 @@ var planes = [
     'UID': 12,
     'name': 'SR-71 Blackbird',
     'img': '/img/sr71.jpg',
+    'healthMax': 200,
     'health': 200,
     'attackValueMax': 5,
     'attackValueMin': 1,
@@ -175,6 +187,7 @@ var planes = [
     'UID': 13,
     'name': 'Death Star',
     'img': '/img/deathstar.jpg',
+    'healthMax': 10000,
     'health': 10000,
     'attackValueMax': 125,
     'attackValueMin': 75,
@@ -266,25 +279,25 @@ function databaseConvertor() {
 databaseConvertor();
 
 function hpBars1(i) {
-  if (team1[i].health <= 10000 && team1[i].health > 60) {
+  if ((team1[i].health / team1[i].healthMax) <= 1 && (team1[i].health / team1[i].healthMax) > .6) {
     $(".team1unitHP" + i).css("background-color", "green").css("width", "100%");
   }
-  if (team1[i].health <= 60 && team1[i].health > 30) {
+  if ((team1[i].health / team1[i].healthMax)  <= .6 && (team1[i].health / team1[i].healthMax) > .30) {
     $(".team1unitHP" + i).css("background-color", "yellow").css("width", "60%");
   }
-  if (team1[i].health <= 30 && team1[i].health > 0) {
+  if ((team1[i].health / team1[i].healthMax) <= .30 && (team1[i].health / team1[i].healthMax)  > .0) {
     $(".team1unitHP" + i).css("background-color", "red").css("width", "30%");
   }
 }
 
 function hpBars2(i) {
-  if (team2[i].health <= 10000 && team2[i].health > 60) {
+  if ((team2[i].health / team2[i].healthMax) <= 1 && (team2[i].health / team2[i].healthMax) > .6) {
     $(".team2unitHP" + i).css("background-color", "green").css("width", "100%");
   }
-  if (team2[i].health <= 60 && team2[i].health > 30) {
+  if ((team2[i].health / team2[i].healthMax)  <= .6 && (team2[i].health / team2[i].healthMax) > .30) {
     $(".team2unitHP" + i).css("background-color", "yellow").css("width", "60%");
   }
-  if (team2[i].health <= 30 && team2[i].health > 0) {
+  if ((team2[i].health / team2[i].healthMax) <= .30 && (team2[i].health / team2[i].healthMax)  > .0) {
     $(".team2unitHP" + i).css("background-color", "red").css("width", "30%");
   }
 }
