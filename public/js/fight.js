@@ -1,3 +1,7 @@
+// we used browserify so we could use node packages on the front end
+var Roll = require('roll'),
+  roll = new Roll();
+
 var planes = [
   {
     'UID': 1,
@@ -395,8 +399,9 @@ $(".fight").click(function (event) {
   // loop through team 1's units
   for (let i = 0; i < team1.length; i++) {
     // generate rolls for both teams
-    let t1DiceRoll = Math.ceil(Math.random() * 6);
-    let t2DiceRoll = Math.ceil(Math.random() * 6);
+    var t1DiceRoll = roll.roll('d20');
+    var t2DiceRoll = roll.roll('d20');
+    console.log(t1DiceRoll);
 
     // checks to makes sure both units have health
     if (team1[i].health > 0 && team2[i].health > 0) {
