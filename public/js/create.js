@@ -13,7 +13,7 @@ $(document).ready(function () {
     var planeImgList = [
         '/img/su-35.jpg',
         '/img/stealth-fighter.jpg',
-        '/img/f-15.jpg',
+        '/img/Ffifteen.jpg',
         '/img/f-22.jpg',
         '/img/su-57.jpg',
         '/img/mig35.jpg',

@@ -1180,8 +1180,8 @@ var planes = [
   {
     'UID': 3,
     'name': 'F-15 Eagle',
-    'img': '/img/f-15.jpg',
-    'healthMax': 100,
+    'img': '/img/f-15.JPG',
+    'healthMax': 100, 
     'health': 100,
     'attackValueMax': 12,
     'attackValueMin': 8,
