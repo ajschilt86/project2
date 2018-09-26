@@ -36,7 +36,7 @@ var planes = [
   {
     'UID': 3,
     'name': 'F-15 Eagle',
-    'img': '/img/f-15.JPG',
+    'img': '/img/f-15.jpg',
     'healthMax': 100, 
     'health': 100,
     'attackValueMax': 12,
@@ -156,7 +156,7 @@ var planes = [
   {
     'UID': 11,
     'name': 'JDG-00X Devil Gundam',
-    'img': '/img/DevilGundam_Profile.png',
+    'img': '/img/devilgundam.png',
     'healthMax': 666,
     'health': 666,
     'attackValueMax': 205,
