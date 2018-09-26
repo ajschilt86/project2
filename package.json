@@ -1,5 +1,5 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -7,7 +7,8 @@
     "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
+    "build": "browserify ./public/js/fight.js -o ./public/js/browserify.js"
   },
   "license": "ISC",
   "dependencies": {
@@ -16,9 +17,11 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.5.3",
+    "roll": "^1.2.0",
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
+    "browserify": "^16.2.3",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "eslint": "^4.19.1",
@@ -26,5 +29,17 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajschilt86/project2.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ajschilt86/project2/issues"
+  },
+  "homepage": "https://github.com/ajschilt86/project2#readme"
 }
