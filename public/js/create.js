@@ -13,7 +13,7 @@ $(document).ready(function () {
     var planeImgList = [
         '/img/su-35.jpg',
         '/img/stealth-fighter.jpg',
-        '/img/f-15.JPG',
+        '/img/f-15.jpg',
         '/img/f-22.jpg',
         '/img/su-57.jpg',
         '/img/mig35.jpg',
@@ -21,7 +21,7 @@ $(document).ready(function () {
         '/img/s400.jpg',
         '/img/Patriot.jpg',
         '/img/godGundum.jpg',
-        '/img/DevilGundam_Profile.png',
+        '/img/devilgundam.png',
         '/img/sr71.jpg',
         '/img/deathstar.jpg'
     ];
@@ -95,8 +95,8 @@ $(document).ready(function () {
             'UID': 8,
             'name': 'S-400 Triumph',
             'img': '/img/s400.jpg',
-            'hp': '30',
-            'attack': '50',
+            'hp': '40',
+            'attack': '32',
             'crit': '80%',
             'evasion': '15%'
         },
@@ -105,7 +105,7 @@ $(document).ready(function () {
             'name': 'MIM-104 Patriot',
             'img': '/img/Patriot.jpg',
             'hp': '35',
-            'attack': '60',
+            'attack': '35',
             'crit': '85%',
             'evasion': '5%'
         },
@@ -279,6 +279,7 @@ $(document).ready(function () {
         $('.plane--name').text('Name: Select a unit!');
         $('.plane--hp').text('HP: Select a unit!');
         $('.plane--attack').text('Attack: Select a unit!');
+        $('.plane--crit').text('Crit:  Select a unit!');
         $('.plane--eva').text('Evasion:  Select a unit!');
     });
 
@@ -312,6 +313,14 @@ $(document).ready(function () {
             return true;
         }
 
+        //If their are spaces in the name, be sure to tell the user to fill it in
+        if (spaceCheck(squadName) === false || squadName === "") {
+            modal.show();
+            modalTitle.text("Failure to Launch!");
+            modalText.text(`You can't have any spaces in your Squadron name. It also can not be left empty`);
+            return;
+        }
+
         //If there are non-alphanumeric stuff in squadname, do a check.
         if (alphaNumCheck(squadName) === false) {
             modal.show();
@@ -320,18 +329,11 @@ $(document).ready(function () {
             return;
         }
 
+        //Longer than 50 check
         if (squadName.length > 50) {
             modal.show();
             modalTitle.text("Failure to Launch!");
             modalText.text(`Your Squadron name must be less than 50 characters.`);
-            return;
-        }
-
-        //If their are spaces in the name, be sure to tell the user to fill it in
-        if (spaceCheck(squadName) === false || squadName === "") {
-            modal.show();
-            modalTitle.text("Failure to Launch!");
-            modalText.text(`You can't have any spaces in your Squadron name. It also can not be left empty`);
             return;
         }
 
