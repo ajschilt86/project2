@@ -13,7 +13,7 @@ $(document).ready(function () {
     var planeImgList = [
         '/img/su-35.jpg',
         '/img/stealth-fighter.jpg',
-        '/img/f-15.jpg',
+        '/img/f-15.JPG',
         '/img/f-22.jpg',
         '/img/su-57.jpg',
         '/img/mig35.jpg',
@@ -21,7 +21,7 @@ $(document).ready(function () {
         '/img/s400.jpg',
         '/img/Patriot.jpg',
         '/img/godGundum.jpg',
-        '/img/DevilGundam_profile.png',
+        '/img/DevilGundam_Profile.png',
         '/img/sr71.jpg',
         '/img/deathstar.jpg'
     ];
