@@ -131,12 +131,26 @@ td {
         height:50px;
     }
 
-    .returnToBase {
-        font-size: 12px;        
+    .title {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 365px)  {
+    .fightBtn, .returnToBase, .resetBtn {
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        width: 78px; 
+        height:50px;
     }
 
     .title {
-        font-size: 35px;
+        font-size: 20px;
+    }
+
+    titleWording {
+        font-size: 10px;
     }
 }
 
