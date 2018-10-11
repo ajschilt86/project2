@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-4 unitWrapper" style="background-color: #7f7b82;">
+        <div class="col-4 unitWrapper teamBackground">
             <div class='form-field'>
                 <label for='squadronSelector1'>Choose a Squad</label>
                 <select id='squadronSelector1' class='form-control'>
@@ -137,7 +137,7 @@
         <div class="col-4 text-center">
             <h1 class="title">FIGHT TO THE DEATH</h1>
             <p class="titleWording">Click fight to roll the dice and see who attacks who</p>
-            <div style="overflow: auto">
+            <div class="tableScroll">
                 <table class="table mainTable text-centered">
                     <thead>
                         <tr class="tableHeads">
@@ -160,9 +160,8 @@
                             <td scope="row" class="tTwoTotalTeam">2</td>
                             <td class="tTwoTotalHealth">0</td>
                             <td class="tTwoTotalAttack">0</td>
-                            <td class="tTwoTotalCrit">
-                                <0/td> <td class="tTwoTotalDodge">0
-                            </td>
+                            <td class="tTwoTotalCrit">0</td> 
+                            <td class="tTwoTotalDodge">0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -171,7 +170,7 @@
             <a class="btn btn-secondary returnToBase" href="/create">Return to Base</a>
             <a class="btn btn-secondary resetBtn" href="/fight">Reset</a>
         </div>
-        <div class="col-4 unitWrapper" style="background-color: #7f7b82;">
+        <div class="col-4 unitWrapper teamBackground">
             <div class='form-field'>
                 <label for='squadronSelector2'>Choose an Enemy</label>
                 <select id='squadronSelector2' class='form-control'>
