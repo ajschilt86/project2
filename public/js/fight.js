@@ -220,18 +220,18 @@ function getPlanes1() {
   fetch("/api/planes")
     .then(function (response) {
       response.json().then(function (data2) {
-        for (var i = 0; i < data2.length; i++) {
+        data2.forEach(() => {
           if (team1Choice === data2[i].Name) {
             team1b.push(data2[i].pID);
           }
-        }
-        for (let i = 0; i < team1b.length; i++) {
-          for (let g = 0; g < planes.length; g++) {
+        })
+        team1b.forEach(() => {
+          planes.forEach(() => {
             if (team1b[i] === planes[g].UID) {
               team1.push(JSON.parse(JSON.stringify(planes[g])));
             }
-          }
-        }
+          });
+        });
         render();
       });
     })
@@ -243,18 +243,18 @@ function getPlanes2() {
   fetch("/api/planes")
     .then(function (data2) {
       data2.json().then(function (data2) {
-        for (var i = 0; i < data2.length; i++) {
+        data2.forEach(() => {
           if (team2Choice === data2[i].Name) {
             team2b.push(data2[i].pID);
           }
-        }
-        for (let i = 0; i < team2b.length; i++) {
-          for (let g = 0; g < planes.length; g++) {
+        })
+        team2b.forEach(() => {
+          planes.forEach(() => {
             if (team2b[i] === planes[g].UID) {
               team2.push(JSON.parse(JSON.stringify(planes[g])));
             }
-          }
-        }
+          })
+        })
         render();
       });
     })
@@ -262,10 +262,10 @@ function getPlanes2() {
 
 function databaseConvertor() {
   $.get("/api/squadron", function (data) {
-    for (let i = 0; i < data.length; i++) {
+    data.forEach(() => {
       $("#squadronSelector1").append("<option>" + data[i].Name + " </option>");
       $("#squadronSelector2").append("<option>" + data[i].Name + " </option>");
-    }
+    });
   });
   $("#squadronSelector1").change(function () {
     team1Choice = $("#squadronSelector1").val();
@@ -304,34 +304,34 @@ function hpBars2(i) {
 
 function render() {
   //remove negative numbers and replace them with 0
-  for (let i = 0; i < team1.length; i++) {
+  team1.forEach(() => {
     if (team1[i].health < 0) {
       team1[i].health = 0;
     } else {
-        for (let g = 0; g < planes.length; g++) {
+        planes.forEach(() => {
           if (team1[i].UID === planes[g].UID) {
             team1[i].attack = Math.ceil(Math.random() * (planes[g].attackValueMax - planes[g].attackValueMin) + planes[g].attackValueMin);
             team1[i].defense = Math.random() * (planes[g].defenseValueMax - planes[g].defenseValueMin) + planes[g].defenseValueMin;
             team1[i].critical = Math.random() * planes[g].criticalValue;
           }
-        }
+        })
     }
-  }
+  });
 
   //remove negative numbers and replace them with 0
-  for (let i = 0; i < team2.length; i++) {
+  team2.forEach(() => {
     if (team2[i].health < 0) {
       team2[i].health = 0;
     } else {
-      for (let g = 0; g < planes.length; g++) {
+      planes.forEach(() => {
         if (team2[i].UID === planes[g].UID) {
           team2[i].attack = Math.ceil(Math.random() * (planes[g].attackValueMax - planes[g].attackValueMin) + planes[g].attackValueMin);
           team2[i].defense = Math.random() * (planes[g].defenseValueMax - planes[g].defenseValueMin) + planes[g].defenseValueMin;
           team2[i].critical = Math.random() * planes[g].criticalValue;
         }
-      }
+      })
     }
-  }
+  });
   //display team 1 health and stats
   var team1Attack = 0;
   var team1Crit = 0;
@@ -340,7 +340,7 @@ function render() {
   var team1DodgeAvg = 0;
   var team1Health = 0;
   var team1Length = 0;
-  for (let i = 0; i < team1.length; i++) {
+  team1.forEach(() => {
     if (team1[i].health <= 0) {
       $(".team1Stats" + i).html("<p class='kia'>" + team1[i].name + " was KIA!</p>");
     } else {
@@ -360,7 +360,7 @@ function render() {
       team1Length++;
     }
     hpBars1(i);
-  }
+  });
   team1CritAvg = team1Crit / team1Length;
   team1DodgeAvg = team1Dodge / team1Length;
   $(".tOneTotalAttack").html(team1Attack);  
@@ -376,7 +376,7 @@ function render() {
   var team2DodgeAvg = 0;
   var team2Health = 0;
   var team2Length = 0;
-  for (let i = 0; i < team2.length; i++) {
+  team2.forEach(() => {
     if (team2[i].health <= 0) {
       $(".team2Stats" + i).html("<p class='kia'>" + team2[i].name + " was KIA!</p>");
     } else {
@@ -396,7 +396,7 @@ function render() {
       team2Length++;
     }
     hpBars2(i);
-  }
+  });
   team2CritAvg = team2Crit / team2Length;
   team2DodgeAvg = team2Dodge / team2Length;
   $(".tTwoTotalAttack").html(team2Attack);  
@@ -410,7 +410,7 @@ render();
 $(".fight").click(function (event) {
   event.preventDefault();
   // loop through team 1's units
-  for (let i = 0; i < team1.length; i++) {
+  team1.forEach(() => {
     // generate rolls for both teams
     var t1DiceRoll = roll.roll('d20');
     var t2DiceRoll = roll.roll('d20');
@@ -451,7 +451,7 @@ $(".fight").click(function (event) {
       // check if team 1 unit has health and team 2 has no health
     } else if (team1[i].health > 0 && team2[i].health <= 0) {
       // find opponent that has health
-      for (let b = 0; b < team2.length; b++) {
+      team2.forEach(() => {
         if (team2[b].health > 0) {
           // if team 1 roll is greater than team 2, team 1 attacks team 2
           if (t1DiceRoll > t2DiceRoll) {
@@ -484,11 +484,11 @@ $(".fight").click(function (event) {
           }
           render();
         }
-      }
+      })
       // check if team 2 unit has health and team 1 has no health 
     } else if (team1[i].health <= 0 && team2[i].health > 0) {
       // find opponent that has health
-      for (let c = 0; c < team1.length; c++) {
+      team1.forEach(() => {
         if (team1[c].health > 0) {
           // if team 1 roll is greater than team 2, team 1 attacks team 2
           if (t2DiceRoll > t1DiceRoll) {
@@ -524,7 +524,7 @@ $(".fight").click(function (event) {
           }
           render();
         }
-      }
+      })
     }
-  }
+  })
 }); 
