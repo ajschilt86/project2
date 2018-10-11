@@ -1180,7 +1180,7 @@ var planes = [
   {
     'UID': 3,
     'name': 'F-15 Eagle',
-    'img': '/img/f-15.JPG',
+    'img': '/img/Ffifteen.jpg',
     'healthMax': 100, 
     'health': 100,
     'attackValueMax': 12,
@@ -1505,13 +1505,20 @@ function render() {
     }
     hpBars1(i);
   }
-  team1CritAvg = team1Crit / team1Length;
-  team1DodgeAvg = team1Dodge / team1Length;
-  $(".tOneTotalAttack").html(team1Attack);  
-  $(".tOneTotalDodge").html((team1DodgeAvg * 100).toFixed(0) + "%");
-  $(".tOneTotalHealth").html(team1Health);
-  $(".tOneTotalCrit").html((team1CritAvg * 100).toFixed(0) + "%");
 
+  if(team1Length === 0) {
+    $(".tOneTotalAttack").html(team1Attack);  
+    $(".tOneTotalDodge").html("0%");
+    $(".tOneTotalHealth").html(team1Health);
+    $(".tOneTotalCrit").html("0%");
+  } else {
+    team1CritAvg = team1Crit / team1Length;
+    team1DodgeAvg = team1Dodge / team1Length;
+    $(".tOneTotalAttack").html(team1Attack);  
+    $(".tOneTotalDodge").html((team1DodgeAvg * 100).toFixed(0) + "%");
+    $(".tOneTotalHealth").html(team1Health);
+    $(".tOneTotalCrit").html((team1CritAvg * 100).toFixed(0) + "%");
+  }
   //display team 2 health and stats
   var team2Attack = 0;
   var team2Crit = 0;
@@ -1541,12 +1548,21 @@ function render() {
     }
     hpBars2(i);
   }
-  team2CritAvg = team2Crit / team2Length;
-  team2DodgeAvg = team2Dodge / team2Length;
-  $(".tTwoTotalAttack").html(team2Attack);  
-  $(".tTwoTotalDodge").html((team2DodgeAvg * 100).toFixed(0) + "%");
-  $(".tTwoTotalHealth").html(team2Health);
-  $(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
+
+  if(team2Length === 0) {
+    $(".tTwoTotalAttack").html(team2Attack);  
+    $(".tTwoTotalDodge").html("0%");
+    $(".tTwoTotalHealth").html(team2Health);
+    $(".tTwoTotalCrit").html("0%");
+  } else {
+    team2CritAvg = team2Crit / team2Length;
+    team2DodgeAvg = team2Dodge / team2Length;
+    $(".tTwoTotalAttack").html(team2Attack);  
+    $(".tTwoTotalDodge").html((team2DodgeAvg * 100).toFixed(0) + "%");
+    $(".tTwoTotalHealth").html(team2Health);
+    $(".tTwoTotalCrit").html((team2CritAvg * 100).toFixed(0) + "%");
+  }
+
 }
 
 render();
