@@ -12,12 +12,6 @@ body {
     text-align: center;
 }
 
-.teamStats {
-    color: white;
-    margin-bottom: 72px;
-    /* height: 20px; */
-}
-
 .team1unitName, .team2unitName {
     margin-bottom: 2px;
     text-align: center;
@@ -107,5 +101,33 @@ table {
 
 td {
     padding:0 20px 0 20px;
+}
+
+.teamStats {
+    color: white;
+    margin-bottom: 72px;
+    /* height: 20px; */
+}
+@media screen and (max-width: 1091px)  {
+    .fightBtn {
+        width: 146px; 
+    }
+}
+@media screen and (max-width: 440px)  {
+    .fightBtn, .returnToBase, .resetBtn {
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        width: 100px; 
+        height:50px;
+    }
+
+    .returnToBase {
+        font-size: 12px;        
+    }
+
+    .title {
+        font-size: 35px;
+    }
 }
 
